@@ -12,7 +12,7 @@ def filter(source):
 
 
 def execute():
-    code = filter('++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>.')
+    code = filter(',.')
     output = ''
     cells = [0]
     curPos = 0
@@ -40,9 +40,9 @@ def execute():
             x = loopStartPos
         if cmd == '.':
             output = output + chr(cells[curPos])
-        if cmd == '.':
-            #get input char
-            pass
+        if cmd == ',':
+            inVal = input('')
+            cells[curPos] = ord(inVal[0])
         x = x + 1
     print(output)
 
